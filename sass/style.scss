@@ -49,6 +49,7 @@ div.galerie {
         border-radius: 15px;
         background-color: rgba(0, 0, 0, 0.1);
         z-index: 2;
+        box-shadow: 0px 0px 9px 3px #FFF;
     }
 
     .carrousel--ouvrir {
@@ -71,4 +72,30 @@ div.galerie {
   left:0;
   object-fit: cover;
   border-radius: 15px;
+}
+
+.carrousel .btnDiv{
+    display: flex;
+    justify-content: center;
+    
+    button{
+        margin: 1rem;
+        background-color: rgb(3, 57, 99);
+        color: #FFF;
+        border-radius: 25px;
+        border:0.5px solid #FFF;
+        width: 5rem;
+        
+        &:hover{
+            box-shadow: 0px 0px 9px 3px #FFF;
+            animation: buttonCarrousel 2s linear infinite;
+        }
+         
+        }
+}
+
+@keyframes buttonCarrousel {
+    0%{box-shadow: 0px 0px 0px 0px #FFF;}
+    50%{box-shadow: 0px 0px 9px 3px #FFF;}
+    100%{box-shadow: 0px 0px 0px 0px #FFF;}
 }

@@ -69,16 +69,21 @@
         carrousel.classList.remove('carrousel--ouvrir');
     })
 
-    // Ajout des boutons "Précédent" et "Suivant"
+    // Création d'une div pour les boutons "Précédent" et "Suivant"
+    let btnDiv = document.createElement('div');
+    btnDiv.classList.add('btnDiv');
+    carrousel.appendChild(btnDiv);
+
+    // Ajout des boutons "Précédent" et "Suivant" dans la div
     let btnPrecedent = document.createElement('button');
     btnPrecedent.textContent = "<-";
     btnPrecedent.classList.add('btnPrecedent');
-    carrousel.appendChild(btnPrecedent);
+    btnDiv.appendChild(btnPrecedent);
 
     let btnSuivant = document.createElement('button');
     btnSuivant.textContent = "->";
     btnSuivant.classList.add('btnSuivant');
-    carrousel.appendChild(btnSuivant);
+    btnDiv.appendChild(btnSuivant);
 
     // Gestion des événements pour les boutons "Précédent" et "Suivant"
     btnPrecedent.addEventListener('click', function () {
